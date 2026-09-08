@@ -4,16 +4,23 @@ Abel Atnafu's personal portfolio. Plain HTML, CSS, and vanilla JavaScript —
 no build step, no framework, no dependencies to keep up to date. Deploys
 anywhere that can serve static files.
 
+The homepage uses a dark technical theme (`assets/css/site.css`). It is
+dark-only by design — there is no light mode and no theme toggle on that
+page. `resume.html` and `blog/` still run on the older light/warm
+stylesheet (`assets/css/style.css`) and have not been ported yet.
+
 ## Structure
 
 ```
-index.html                        Homepage (About, Experience, Work, Writing, Contact)
+index.html                        Homepage (Hero, About, Selected Work, Stack, Contact)
 resume.html                       Printable résumé (button triggers browser print-to-PDF)
 404.html                          Custom not-found page
 blog/index.html                   Writing / post listing
 blog/rebuilding-in-the-open.html  Sample post — shows the pattern for new posts
-assets/css/style.css              Design system (colors, type, components)
-assets/js/main.js                 Theme toggle, mobile nav, scroll-spy, reveal animations
+assets/css/site.css               Homepage design system (dark theme)
+assets/js/site.js                 Mobile nav, scroll-spy, reveal animations
+assets/css/style.css              Older light theme — still used by resume.html and blog/
+assets/js/main.js                 Older script — still used by resume.html and blog/
 assets/images/                    Favicon + social preview image
 CNAME                             Custom domain for GitHub Pages (abelatnafu.com)
 robots.txt / sitemap.xml          Basic SEO plumbing
@@ -21,23 +28,25 @@ robots.txt / sitemap.xml          Basic SEO plumbing
 
 ## Content checklist
 
-The structure, design, and copy are done — a handful of specifics still need
-your real information. Every placeholder is wrapped in `[brackets]` so
-they're easy to find (search the repo for `[` ). Nothing fabricated or
-guessed has been left un-bracketed.
+Placeholders are wrapped in `[brackets]` so they're easy to find — search
+the repo for `[`. Nothing fabricated has been left un-bracketed.
 
-- [ ] **`index.html` → About**: the "Currently" line.
-- [ ] **`index.html` / `resume.html` → Experience**: three job entries (title, company, dates, bullets).
-- [ ] **`resume.html` → Education**: degree, school, dates.
-- [ ] **`index.html` → Selected Work**: three project cards (name, description, tech tags, and swap the `#work` placeholder hrefs for real repo/live links).
-- [ ] **Skills / Toolbox**: the language and framework tags are a common starter set — edit to match your real stack (`index.html` and `resume.html`, search for `toolbox-group`).
-- [ ] **`resume.html`**: `[City, Country]` in the contact line, and the summary paragraph.
-- [ ] **Socials**: only Email and GitHub are wired up (both confirmed real). Add LinkedIn/X/etc. in the `.contact-links` block in `index.html` once you have the URLs.
-- [ ] Skim `blog/rebuilding-in-the-open.html` — it's real, publishable copy, but read it once and make it sound like you.
+**Homepage (`index.html`)**
 
-The bio paragraphs, hero tagline, and "principles" list are already
-written in a real voice — read through them and adjust to taste, but
-they're not placeholders.
+- [ ] **About → Currently**: the one-line "what I'm working on now".
+- [ ] **About → Based**: city and country.
+- [ ] **Selected Work**: a one-line description for each of the three
+      projects. The project names and their live URLs are real and
+      verified; only the descriptions are placeholders.
+- [ ] **Hero copy**: "Full-stack developer & freelancer" and "Available for
+      select projects" are claims, not facts pulled from anywhere — confirm
+      both still describe you before sharing the site.
+- [ ] **Stack**: the four columns list a plausible stack. Trim anything you
+      wouldn't want to be asked about in an interview.
+
+**Résumé (`resume.html`)** — still on the old stylesheet, still carries its
+original placeholders: Experience (three roles), Education, City/Country,
+and the summary paragraph.
 
 ## Preview locally
 
