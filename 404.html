@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Abel Atnafu</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F1E7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110B" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<div class="scroll-progress" style="display:none;"></div>
+<main style="min-height:100svh; display:flex; align-items:center;">
+  <div class="container" style="text-align:center;">
+    <p class="eyebrow reveal is-visible">404</p>
+    <h1 class="reveal is-visible" style="font-size:var(--fs-hero); margin-top:.5rem;">
+      <span class="last" style="font-style:italic; color:var(--accent);">Page not found.</span>
+    </h1>
+    <p class="lede reveal is-visible" style="margin-inline:auto; margin-top:1.25rem;">
+      This page wandered off, or never existed in the first place.
+    </p>
+    <div class="hero-actions reveal is-visible" style="justify-content:center; margin-top:2.5rem;">
+      <a class="btn btn-primary" href="/index.html">Back to Home</a>
+      <a class="btn btn-ghost" href="/blog/">Read the Blog</a>
+    </div>
+  </div>
+</main>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

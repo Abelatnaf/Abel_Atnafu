@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abel Atnafu — Software Engineer</title>
+<meta name="description" content="Portfolio of Abel Atnafu, a software engineer who builds fast, reliable software — from backend systems to the interfaces people touch.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F1E7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110B" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://abelatnafu.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abelatnafu.com/">
+<meta property="og:title" content="Abel Atnafu — Software Engineer">
+<meta property="og:description" content="Portfolio of Abel Atnafu, a software engineer who builds fast, reliable software — from backend systems to the interfaces people touch.">
+<meta property="og:image" content="https://abelatnafu.com/assets/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abel Atnafu — Software Engineer">
+<meta name="twitter:description" content="Portfolio of Abel Atnafu, a software engineer who builds fast, reliable software.">
+<meta name="twitter:image" content="https://abelatnafu.com/assets/images/og-image.png">
+
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abel Atnafu",
+  "url": "https://abelatnafu.com/",
+  "jobTitle": "Software Engineer",
+  "sameAs": ["https://github.com/Abelatnaf"]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="logo-mark" href="#top" aria-label="Abel Atnafu — home">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="7" fill="#1B1712"/>
+        <path d="M16 7 L8.5 25.5 M16 7 L23.5 25.5 M11.4 19.2 H20.6" fill="none" stroke="#C1481E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Abel Atnafu</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about"><span class="n">01</span>About</a></li>
+        <li><a href="#experience"><span class="n">02</span>Experience</a></li>
+        <li><a href="#work"><span class="n">03</span>Work</a></li>
+        <li><a href="#writing"><span class="n">04</span>Writing</a></li>
+        <li><a href="#contact"><span class="n">05</span>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a class="icon-btn" href="/resume.html" aria-label="Résumé">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+      </a>
+      <button class="hamburger" id="menuOpen" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a class="logo-mark" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1B1712"/><path d="M16 7 L8.5 25.5 M16 7 L23.5 25.5 M11.4 19.2 H20.6" fill="none" stroke="#C1481E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Abel Atnafu</span>
+    </a>
+    <button class="icon-btn" id="menuClose" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="#about"><span class="n">01</span>About</a></li>
+    <li><a href="#experience"><span class="n">02</span>Experience</a></li>
+    <li><a href="#work"><span class="n">03</span>Work</a></li>
+    <li><a href="#writing"><span class="n">04</span>Writing</a></li>
+    <li><a href="#contact"><span class="n">05</span>Contact</a></li>
+    <li><a href="/resume.html"><span class="n">↗</span>Résumé</a></li>
+  </ul>
+</div>
+
+<main id="main-content">
+
+  <section class="hero" id="top">
+    <div class="container" style="position:relative;">
+      <div class="hero-eyebrow reveal">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="eyebrow">Software Engineer</span>
+      </div>
+      <h1 class="reveal" style="--reveal-delay:.08s">
+        Abel<span class="last">Atnafu</span>
+      </h1>
+      <p class="lede reveal" style="--reveal-delay:.16s">
+        I build fast, reliable software — from backend systems and APIs to the
+        interfaces people actually touch. I like taking things apart to see how
+        they work, then leaving them a little better than I found them.
+      </p>
+      <div class="hero-actions reveal" style="--reveal-delay:.24s">
+        <a class="btn btn-primary" href="#work">View My Work</a>
+        <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+        <a class="link-arrow" href="/resume.html">
+          Résumé
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+      <div class="focus-ticker reveal" style="--reveal-delay:.32s">
+        <span>Backend Systems</span>
+        <span>Developer Tooling</span>
+        <span>Web Platforms</span>
+        <span>Design Systems</span>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="idx">01</span>
+        <span class="rule-line"></span>
+        <span class="label">About</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio reveal">
+          <h2 class="heading-lg">Building things that hold up.</h2>
+          <p style="margin-top:1.25rem;">
+            I'm a software engineer who likes taking systems apart to see how they
+            work, then putting them back together a little better than I found
+            them. My focus is the full stack — from data models and APIs to the
+            pixels people actually click on.
+          </p>
+          <p>
+            I care about software that's boring in the best way: predictable,
+            well-tested, and easy for the next person to pick up. Outside of
+            client work I spend my time on side projects, reading source code,
+            and writing about what I learn.
+          </p>
+          <p class="currently">
+            <b>Currently —</b> <span>[add what you're building, learning, or exploring right now]</span>
+          </p>
+        </div>
+
+        <div class="principles reveal" style="--reveal-delay:.1s" aria-label="How I work">
+          <div class="principle">
+            <span class="num">01</span>
+            <div><h3>Small, reversible steps</h3><p>Ship changes that are easy to review and even easier to undo.</p></div>
+          </div>
+          <div class="principle">
+            <span class="num">02</span>
+            <div><h3>Write for the next reader</h3><p>Code is read far more than it's written, so clarity beats cleverness.</p></div>
+          </div>
+          <div class="principle">
+            <span class="num">03</span>
+            <div><h3>Make the fast path the safe path</h3><p>The easiest way to do something should also be the correct way.</p></div>
+          </div>
+          <div class="principle">
+            <span class="num">04</span>
+            <div><h3>Measure, then optimize</h3><p>Intuition is a hypothesis, not a conclusion.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="idx">02</span>
+        <span class="rule-line"></span>
+        <span class="label">Experience</span>
+      </div>
+      <h2 class="heading-lg reveal">Where I've worked</h2>
+
+      <div class="timeline" style="margin-top:2.5rem;">
+        <div class="timeline-item reveal">
+          <div class="timeline-date">[Mon Year] — Present</div>
+          <div>
+            <div class="timeline-role">[Job Title] <span>· [Company Name]</span></div>
+            <ul class="timeline-desc">
+              <li>[A key project you led or shipped, and the outcome it had.]</li>
+              <li>[Another responsibility, system you owned, or metric you moved.]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">[Mon Year] — [Mon Year]</div>
+          <div>
+            <div class="timeline-role">[Job Title] <span>· [Company Name]</span></div>
+            <ul class="timeline-desc">
+              <li>[What the team was building and your part in it.]</li>
+              <li>[A specific problem you solved.]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">[Mon Year] — [Mon Year]</div>
+          <div>
+            <div class="timeline-role">[Job Title] <span>· [Company Name]</span></div>
+            <ul class="timeline-desc">
+              <li>[Where this role started — first real project, first bug, first launch.]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="more-resume reveal">
+        <a class="link-arrow" href="/resume.html">
+          Earlier roles &amp; education on the full résumé
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+
+      <div class="toolbox reveal">
+        <p class="eyebrow" style="margin-bottom:1rem;">Toolbox</p>
+        <div class="toolbox-group">
+          <h3>Languages</h3>
+          <div class="tag-row">
+            <span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Go</span><span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="toolbox-group">
+          <h3>Frameworks</h3>
+          <div class="tag-row">
+            <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Django</span>
+          </div>
+        </div>
+        <div class="toolbox-group">
+          <h3>Infra &amp; Tools</h3>
+          <div class="tag-row">
+            <span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">Git</span><span class="tag">Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="idx">03</span>
+        <span class="rule-line"></span>
+        <span class="label">Selected Work</span>
+      </div>
+      <h2 class="heading-lg reveal">Things I've built</h2>
+      <p class="lede reveal" style="margin-top:.75rem;">Three slots, ready for your best work — swap these for real projects with real links.</p>
+
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <div class="work-cover"><span class="idx">01</span></div>
+          <div class="work-body">
+            <h3>[Project Name]</h3>
+            <p>[One or two sentences on the problem this project solves and why it matters.]</p>
+            <div class="tag-row"><span class="tag">[Tech]</span><span class="tag">[Tech]</span><span class="tag">[Tech]</span></div>
+            <div class="work-links">
+              <a href="#work">Code ↗</a>
+              <a href="#work">Live ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal" style="--reveal-delay:.1s">
+          <div class="work-cover"><span class="idx">02</span></div>
+          <div class="work-body">
+            <h3>[Project Name]</h3>
+            <p>[One or two sentences on the problem this project solves and why it matters.]</p>
+            <div class="tag-row"><span class="tag">[Tech]</span><span class="tag">[Tech]</span><span class="tag">[Tech]</span></div>
+            <div class="work-links">
+              <a href="#work">Code ↗</a>
+              <a href="#work">Live ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal" style="--reveal-delay:.2s">
+          <div class="work-cover"><span class="idx">03</span></div>
+          <div class="work-body">
+            <h3>[Project Name]</h3>
+            <p>[One or two sentences on the problem this project solves and why it matters.]</p>
+            <div class="tag-row"><span class="tag">[Tech]</span><span class="tag">[Tech]</span><span class="tag">[Tech]</span></div>
+            <div class="work-links">
+              <a href="#work">Code ↗</a>
+              <a href="#work">Live ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="work-more reveal">
+        <a class="link-arrow" href="https://github.com/Abelatnaf" target="_blank" rel="noopener">
+          See more on GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="writing">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="idx">04</span>
+        <span class="rule-line"></span>
+        <span class="label">Writing</span>
+      </div>
+      <h2 class="heading-lg reveal">Notes &amp; essays</h2>
+
+      <div class="writing-grid" style="margin-top:2.5rem;">
+        <a class="post-card reveal" href="/blog/rebuilding-in-the-open.html">
+          <div class="post-date">Aug 2026</div>
+          <h3>Rebuilding this site in the open</h3>
+          <p>Why I tore down the old placeholder and started this portfolio from scratch — plus what's still left to fill in.</p>
+          <span class="link-arrow">
+            Read the post
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </a>
+        <a class="post-card post-card--ghost reveal" style="--reveal-delay:.1s" href="/blog/">
+          <span class="plus">+</span>
+          <p>Your next post starts here — drop a new file in <code>/blog</code> and link it from the index.</p>
+        </a>
+      </div>
+
+      <div class="writing-more reveal">
+        <a class="link-arrow" href="/blog/">
+          View all posts
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="idx">05</span>
+        <span class="rule-line"></span>
+        <span class="label">Contact</span>
+      </div>
+      <h2 class="heading-lg reveal">Let's build something.</h2>
+      <p class="lede reveal" style="margin-top:.75rem;">
+        Have a project, a role, or just want to talk shop? I read every message
+        myself and try to reply promptly.
+      </p>
+      <a class="contact-email reveal" href="mailto:abelatnafu.g@gmail.com">abelatnafu.g@gmail.com</a>
+      <div>
+        <button class="copy-email reveal" id="copyEmail" type="button" data-email="abelatnafu.g@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+          <span data-label>Copy email</span>
+        </button>
+      </div>
+
+      <div class="contact-links reveal">
+        <a href="mailto:abelatnafu.g@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z"/><path d="m4 6 8 7 8-7"/></svg>
+          Email
+        </a>
+        <a href="https://github.com/Abelatnaf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98.01 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.77.11 3.06.74.8 1.19 1.83 1.19 3.09 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Abel Atnafu. Designed &amp; built by hand.</p>
+    <div class="footer-links">
+      <span>Set in Fraunces &amp; Archivo</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Résumé — Abel Atnafu</title>
+<meta name="description" content="Résumé of Abel Atnafu, software engineer.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F1E7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110B" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://abelatnafu.com/resume.html">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="scroll-progress no-print" id="scrollProgress"></div>
+
+<header class="site-header no-print" id="siteHeader">
+  <div class="header-inner">
+    <a class="logo-mark" href="/index.html" aria-label="Abel Atnafu — home">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1B1712"/><path d="M16 7 L8.5 25.5 M16 7 L23.5 25.5 M11.4 19.2 H20.6" fill="none" stroke="#C1481E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Abel Atnafu</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/index.html#about"><span class="n">01</span>About</a></li>
+        <li><a href="/index.html#experience"><span class="n">02</span>Experience</a></li>
+        <li><a href="/index.html#work"><span class="n">03</span>Work</a></li>
+        <li><a href="/index.html#writing"><span class="n">04</span>Writing</a></li>
+        <li><a href="/index.html#contact"><span class="n">05</span>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="menuOpen" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav no-print" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a class="logo-mark" href="/index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1B1712"/><path d="M16 7 L8.5 25.5 M16 7 L23.5 25.5 M11.4 19.2 H20.6" fill="none" stroke="#C1481E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Abel Atnafu</span>
+    </a>
+    <button class="icon-btn" id="menuClose" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="/index.html#about"><span class="n">01</span>About</a></li>
+    <li><a href="/index.html#experience"><span class="n">02</span>Experience</a></li>
+    <li><a href="/index.html#work"><span class="n">03</span>Work</a></li>
+    <li><a href="/index.html#writing"><span class="n">04</span>Writing</a></li>
+    <li><a href="/index.html#contact"><span class="n">05</span>Contact</a></li>
+  </ul>
+</div>
+
+<main id="main-content">
+  <div class="resume-head">
+    <div class="container container--narrow">
+      <a class="back-link no-print" href="/index.html">← Back to portfolio</a>
+      <h1>Abel Atnafu</h1>
+      <p class="role">Software Engineer</p>
+      <div class="resume-meta">
+        <a href="mailto:abelatnafu.g@gmail.com">abelatnafu.g@gmail.com</a>
+        <a href="https://github.com/Abelatnaf" target="_blank" rel="noopener">github.com/Abelatnaf</a>
+        <span>[City, Country]</span>
+      </div>
+      <div class="resume-actions no-print">
+        <button class="btn btn-primary" id="printResume" type="button">Print / Save as PDF</button>
+        <a class="btn btn-ghost" href="mailto:abelatnafu.g@gmail.com">Email Me</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="resume-section">
+    <div class="container container--narrow">
+      <h2 class="resume-h2">Summary</h2>
+      <p class="resume-summary">
+        Software engineer focused on building reliable, well-tested systems across
+        the stack — from data models and APIs to the interfaces people use every
+        day. [Add a sentence or two on your specialty, the kind of teams you work
+        best on, or the problems you're most drawn to.]
+      </p>
+    </div>
+  </section>
+
+  <section class="resume-section">
+    <div class="container container--narrow">
+      <h2 class="resume-h2">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">[Mon Year] — Present</div>
+          <div>
+            <div class="timeline-role">[Job Title] <span>· [Company Name]</span></div>
+            <ul class="timeline-desc">
+              <li>[A key project you led or shipped, and the outcome it had.]</li>
+              <li>[Another responsibility, system you owned, or metric you moved.]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">[Mon Year] — [Mon Year]</div>
+          <div>
+            <div class="timeline-role">[Job Title] <span>· [Company Name]</span></div>
+            <ul class="timeline-desc">
+              <li>[What the team was building and your part in it.]</li>
+              <li>[A specific problem you solved.]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">[Mon Year] — [Mon Year]</div>
+          <div>
+            <div class="timeline-role">[Job Title] <span>· [Company Name]</span></div>
+            <ul class="timeline-desc">
+              <li>[Where this role started — first real project, first bug, first launch.]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section">
+    <div class="container container--narrow">
+      <h2 class="resume-h2">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">[Year] — [Year]</div>
+          <div>
+            <div class="timeline-role">[Degree] <span>· [University Name]</span></div>
+            <ul class="timeline-desc">
+              <li>[Honors, relevant coursework, or activities worth mentioning.]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section">
+    <div class="container container--narrow">
+      <h2 class="resume-h2">Skills</h2>
+      <div class="toolbox" style="margin-top:0;">
+        <div class="toolbox-group">
+          <h3>Languages</h3>
+          <div class="tag-row"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Go</span><span class="tag">SQL</span></div>
+        </div>
+        <div class="toolbox-group">
+          <h3>Frameworks</h3>
+          <div class="tag-row"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Django</span></div>
+        </div>
+        <div class="toolbox-group">
+          <h3>Infra &amp; Tools</h3>
+          <div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">Git</span><span class="tag">Linux</span></div>
+        </div>
+      </div>
+      <p class="lede" style="margin-top:var(--sp-6); font-size:var(--fs-small);">
+        Full project write-ups and articles at
+        <a class="underline-hover" href="https://abelatnafu.com">abelatnafu.com</a>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer no-print">
+  <div class="container footer-inner">
+    <p>© 2026 Abel Atnafu. Designed &amp; built by hand.</p>
+    <div class="footer-links">
+      <a href="/index.html">abelatnafu.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebuilding this site in the open — Abel Atnafu</title>
+<meta name="description" content="A quick note on why this portfolio exists, what it's built with, and what's still a work in progress.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F1E7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110B" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://abelatnafu.com/blog/rebuilding-in-the-open.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://abelatnafu.com/blog/rebuilding-in-the-open.html">
+<meta property="og:title" content="Rebuilding this site in the open">
+<meta property="og:description" content="A quick note on why this portfolio exists, what it's built with, and what's still a work in progress.">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="logo-mark" href="/index.html" aria-label="Abel Atnafu — home">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1B1712"/><path d="M16 7 L8.5 25.5 M16 7 L23.5 25.5 M11.4 19.2 H20.6" fill="none" stroke="#C1481E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Abel Atnafu</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/index.html#about"><span class="n">01</span>About</a></li>
+        <li><a href="/index.html#experience"><span class="n">02</span>Experience</a></li>
+        <li><a href="/index.html#work"><span class="n">03</span>Work</a></li>
+        <li><a href="/index.html#writing" class="is-active"><span class="n">04</span>Writing</a></li>
+        <li><a href="/index.html#contact"><span class="n">05</span>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a class="icon-btn" href="/resume.html" aria-label="Résumé">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+      </a>
+      <button class="hamburger" id="menuOpen" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a class="logo-mark" href="/index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1B1712"/><path d="M16 7 L8.5 25.5 M16 7 L23.5 25.5 M11.4 19.2 H20.6" fill="none" stroke="#C1481E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Abel Atnafu</span>
+    </a>
+    <button class="icon-btn" id="menuClose" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="/index.html#about"><span class="n">01</span>About</a></li>
+    <li><a href="/index.html#experience"><span class="n">02</span>Experience</a></li>
+    <li><a href="/index.html#work"><span class="n">03</span>Work</a></li>
+    <li><a href="/index.html#writing"><span class="n">04</span>Writing</a></li>
+    <li><a href="/index.html#contact"><span class="n">05</span>Contact</a></li>
+  </ul>
+</div>
+
+<main id="main-content">
+  <div class="page-hero">
+    <div class="container container--narrow">
+      <a class="back-link" href="/blog/">← All posts</a>
+      <p class="eyebrow" style="margin-top:1.25rem;">Aug 2026 · Writing</p>
+      <h1 class="heading-lg" style="margin-top:.5rem;">Rebuilding this site in the open</h1>
+      <p class="lede" style="margin-top:.75rem;">
+        A quick note on why this portfolio exists, what it's built with, and
+        what's still a work in progress.
+      </p>
+    </div>
+  </div>
+
+  <article class="section" style="padding-top:0;">
+    <div class="container container--narrow prose">
+      <p>
+        For a while, this domain didn't point anywhere in particular — just a
+        placeholder, waiting for a real site to catch up to it. This post marks
+        the start of that changing.
+      </p>
+      <p>
+        The site itself is intentionally simple: plain HTML, CSS, and a small
+        amount of JavaScript, with no build step and no framework to keep up to
+        date. It's fast, it's easy to edit by hand, and it deploys anywhere that
+        can serve static files — which turns out to be almost everywhere.
+      </p>
+      <p>
+        The design leans on a few ideas: warm paper tones instead of stark
+        white, one confident accent color instead of a palette of ten, a serif
+        for headlines paired with a monospace for labels and dates, and
+        generous whitespace instead of clutter. The goal was something that
+        feels considered rather than templated.
+      </p>
+      <p>
+        A few things here are still placeholders — the project cards, the
+        experience timeline, the résumé details. Filling those in with real
+        work is next, and this blog is where the progress will get written
+        down.
+      </p>
+      <p>
+        If you're reading this, the site is live. Everything else is a work in
+        progress — which, for a portfolio, feels about right.
+      </p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Abel Atnafu. Designed &amp; built by hand.</p>
+    <div class="footer-links">
+      <a href="/blog/">← All posts</a>
+      <a href="/index.html">abelatnafu.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>
